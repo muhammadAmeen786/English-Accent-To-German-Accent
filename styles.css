@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --bg--primary--color: #e4979a;
+  --text--primary--color: #12b0e8;
+  --text-secondary-color: black;
+  --backgroundColor: #b9345a;
+}
+body {
+  background-color: var(--backgroundColor);
+}
+
+.heading {
+  text-align: center;
+  background-color: var(--bg--primary--color);
+  color: var(--text-secondary-color);
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 527px;
+}
+textarea {
+  border: 3px solid var(--text--primary--color);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.input-translate-section,
+.output-translate-section {
+  text-align: center;
+
+  color: rgb(59, 59, 59);
+  font-size: 2rem;
+}
+
+.discription {
+  color: var(--text--primary--color);
+  font-weight: 600;
+  padding: 1.5rem;
+}
+
+#translate-btn {
+  padding: 0.7rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: var(--bg--primary--color);
+  cursor: pointer;
+}
+
+.error-msg {
+  color: var(--text--primary--color);
+  font-weight: 600;
+  font-size: 1.5rem;
+  max-width: 13vw;
+  margin-top: 1.3rem;
+  display: none;
+}
+
+.social-touch {
+  position: sticky;
+  bottom: 0;
+  margin-top: 4.4rem;
+  top: 100%;
+}
+
+.icon-style {
+  font-size: 35px;
+  color: var(--text-secondary-color);
+}
+
+footer {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  width: auto;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: var(--bg--primary--color);
+}
+
+@media only screen and (max-width: 1300px) {
+  main {
+    height: auto;
+    flex-direction: column;
+  }
+  .social-touch {
+    margin-top: 2.6rem;
+  }
+  .error-msg {
+    max-width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: red;
+    background: aliceblue;
+    margin: 0.5rem;
+  }
+  .btn-message {
+    display: contents;
+  }
+  #translate-btn {
+    margin: 1rem;
+  }
+
+  .social-touch {
+    margin-top: 7.2rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  textarea {
+    width: 75%;
+  }
+}
