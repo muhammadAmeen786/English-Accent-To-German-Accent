@@ -16,14 +16,15 @@ let btnToTranslate = document.querySelector("#translate-btn");
 btnToTranslate.addEventListener("click", function () {
   var inputTextVal = inputText.value;
   if (inputTextVal == "") {
-    outputText = "please enter soemthing to translate";
+    alert('you need to type something in order to translate')
+    return 
   } else {
     textTranslation(inputTextVal);
   }
 });
 
-function textAndUrl(url) {
-  return url + "?" + "text=" + inputText.value;
+function textAndUrl(url,input) {
+  return url + "?" + "text=" + input;
 }
 function errorHandler(error) {
   console.log("some error occured" + error);
@@ -32,13 +33,13 @@ function errorHandler(error) {
 
 function textTranslation(inputTextVal) {
   fetch(
-    textAndUrl("https://api.funtranslations.com/translate/german-accent.json")
+    textAndUrl("https://api.funtranslations.com/translate/german-accent.json" ,inputTextVal)
   )
     .then((Response) => Response.json())
     .then((json) => {
-      // console.log(json)
-      var translateText = json.contents.translated;
-      outputText.innerHTML = translateText;
+       console.log(json)
+    
+      outputText.innerHTML = json.contents.translated;
     })
     .catch(errorHandler);
 }
