@@ -28,7 +28,8 @@ function textAndUrl(url,input) {
 }
 function errorHandler(error) {
   console.log("some error occured" + error);
-  alert("something wrong with the server.");
+  // alert("something wrong with the server.");
+  outputText.innerHTML = "Some error occured with the API, please try after some time"
 }
 
 function textTranslation(inputTextVal) {
